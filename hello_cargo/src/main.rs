@@ -3,5 +3,10 @@ fn main() {
 
     println!("vcsc gukhum");
 
-    println!("hello, Minhee modify");
+    println!("hello, wow modify");
+    println!("hello, wow modify");
+    println!("hello, wow modify");
+    println!("hello, wow modify");
+    println!("hello, wow modify");
+
 }
