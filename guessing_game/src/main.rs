@@ -37,18 +37,18 @@ fn main() {
 
         println!("You guessed: {}", guess);
 
-        match guess >= secret_number {
-            true  => println!("true "),
-            false => println!("false")
-        }
-
-        // match guess.cmp(&secret_number) {
-        //     Ordering::Less    => println!("Too small!"),
-        //     Ordering::Greater => println!("Too big!"),
-        //     Ordering::Equal   => {
-        //         println!("You win!");
-        //         break;
-        //     }
+        // match guess >= secret_number {
+        //     true  => println!("true "),
+        //     false => println!("false")
         // }
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less    => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal   => {
+                println!("You win!");
+                break;
+            }
+        }
     }
 }
