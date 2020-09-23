@@ -31,4 +31,9 @@ fn main() {
     for rev_number in (1..4).rev(){
         println!("rev numbers : {}!", rev_number);
     }
+
+}
+
+fn jjw() -> i32 {
+    1 + 2
 }
