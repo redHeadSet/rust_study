@@ -24,9 +24,10 @@ fn main() {
     let ref_1 = &mut mutable_string_test;
     modify_str(ref_1);
     println!("ref_1 : {}", ref_1);
-    let ref_2 = &mut mutable_string_test;   // 이상하네... 안된다고 했는데...;;
+    let ref_2 = &mut mutable_string_test;
     modify_str(ref_2);
     println!("ref_2 : {}", ref_2);
+    // println!("ref_1 : {}", ref_1);   // 에러!
 
     // =====================================================
     
