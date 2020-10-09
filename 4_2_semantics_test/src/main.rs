@@ -1,5 +1,5 @@
 fn main() {
-    // segmatics 의미론 예제 ===========================
+    // sematics 의미론 예제 ===========================
     // 의미론이란 : 값을 변수에 대입하는 것과 유사함.
     // 즉, 함수에 값을 전달하는 것은 변수값을 넘기는 방식과 유사함 (copy 하거나 move 하거나. call by value, call by reference 같은 의미?)
 
@@ -7,7 +7,7 @@ fn main() {
     makes_copy(x);
     // 해당 함수는 문제가 없다. i32 등은 ownership 에서 말했듯이 Copy 트레잇을 가지고 있다.
 
-    let s = String::from("segmatics string");
+    let s = String::from("sematics string");
     takes_ownership(s);
     // 해당 함수는 문제가 생길 수 있다.
     // s 값은 drop 트레잇을 가지고 있으므로 함수 밖으로 벗어나는 시점에서 스코프 밖으로 벗어나면서 해제된다.
