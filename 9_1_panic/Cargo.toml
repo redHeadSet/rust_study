@@ -7,3 +7,13 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+# panic 이 발생하면 되감기 실행 (unwind)
+# 각 함수로부터 스택을 거꾸로 훝어가며 데이터 제거
+[profile.test]
+panic = 'unwind'
+
+# panic 이 발생하면 즉시 그만두기 (abort)
+# 데이터 제거 없이 프로그램 종료 -> 운영체제에 의한 메모리 청소 필요
+[profile.release]
+panic = 'abort'
