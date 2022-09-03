@@ -7,6 +7,9 @@ pub mod config_structure;
 use config_structure::GrepConfigs;
 
 pub fn parse_args(args:&[String]) -> GrepConfigs {
+
+    // unwrap 하며 Result 값을 받을 수 있지만
+    // 에러 발생 시에는 |err| 클로저를 사용하여 에러 핸들링 가능
     GrepConfigs::parse_args(args).unwrap_or_else(|err| {
         println!("parse_args error : {}", err);
         process::exit(1);
