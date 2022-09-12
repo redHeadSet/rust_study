@@ -21,8 +21,8 @@ fn cls_env_fn() {
     // 이 부분을 함수로 선언한 경우 당연히 에러가 발생한다
     // fn func_env(args:u32) -> bool { args == x }
 
-    let y = 4;
-    cls_env(y);
+    let y = 3;
+    println!("cls_env_fn : {}",cls_env(y))
 }
 
 fn cls_env_fn_once() {
@@ -36,5 +36,5 @@ fn cls_env_fn_once() {
     // 위처럼 x에 대한 처리를 진행하려고 하면 소유권이 이동되었다고 에러가 발생
 
     let y = vec![4,5,6];
-    cls_env(y);
+    println!("cls_env_fn_once : {}",cls_env(y))
 }
